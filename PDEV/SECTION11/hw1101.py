@@ -1,33 +1,54 @@
+#SHORT SOLUTION
 
-######## MAP ########
+def cal_area1(s):
+    return s[0] * s[1]
 
-def double(a):
-    return a * 2
+list_0 = [(3,4),(10,3),(5,6),(1,9)]
 
-print(list(map(double,[1,2,3,4,5,6,7])))
-
-print(list(map(lambda x : x ** 2 , (1,2,3,4,5,6,7,8,9,10) )))
-
-
-list1 = [1,2,3,4,5]
-
-list2 = [5,10,15,20,25,30,35]
-
-list3 = [3,6,9,12]
+print(list(map(cal_area1,list_0)))
 
 
-print(list(map(lambda x,y,z : x * y * z, list1, list2, list3)))
+##LONG SOLUTION
 
-######## REDUCE ########
+def cal_area2(a,b):
+    return a * b 
 
-from functools import reduce
+list0 = [(3,4),(10,3),(5,6),(1,9)]
 
-print(reduce(lambda x,y : x * y, [1,2,3,4,5]))
+list1 = list()
+list2 = list()
 
-def max(x,y):
-    if x > y:
-        return x
-    else:
-        return y
+for i,j in list0:
+    list1.append(i)
+    list2.append(j)
 
-print(reduce(max,[2,3,4,133,294,224,3874,2223,387,323]))
+print(list(map(lambda a,b : cal_area2(a,b) , list1,list2)))
+
+### CALCULATING ROUND
+def cal_round(a):
+    return 2 * (a[0] + a[1])
+
+list_0 = [(3,4),(10,3),(5,6),(1,9)]
+
+print(list(map(cal_round,list_0)))
+
+
+"""
+list = [[1,2,3], [4,5,6,7],[8,9]]
+
+list1 = [2 * i for i in list]
+
+print(list1)
+
+list = [(1,2),(3,4),(5,6)]
+
+list1 = [i * j for i,j in list]
+
+print(list1)
+
+print(list(map(list1,level)))
+
+#print(list(map(lambda x,y : x * y ,list11,list12)))
+
+"""
+    

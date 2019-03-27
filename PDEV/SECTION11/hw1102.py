@@ -1,34 +1,26 @@
-
-######## MAP ########
-
-def double(a):
-    return a * 2
-
-print(list(map(double,[1,2,3,4,5,6,7])))
-
-print(list(map(lambda x : x ** 2 , (1,2,3,4,5,6,7,8,9,10) )))
-
-
-list1 = [1,2,3,4,5]
-
-list2 = [5,10,15,20,25,30,35]
-
-list3 = [3,6,9,12]
-
-
-print(list(map(lambda x,y,z : x * y * z, list1, list2, list3)))
-
-######## REDUCE ########
-
-from functools import reduce
-
-print(reduce(lambda x,y : x * y, [1,2,3,4,5]))
-
-def max(x,y):
-    if x > y:
-        return x
+def is_triangle(tuple):
+    
+    if (abs(tuple[0]+tuple[1]) > tuple[2] and abs(tuple[0]+tuple[2]) > tuple[1] and abs(tuple[1]+tuple[2]) > tuple[0]):
+        return True
     else:
-        return y
+        return False
 
-print(reduce(max,[2,3,4,133,294,224,3874,2223,387,323]))
-##test
+
+list0 = [(3,4,5),(6,8,10),(3,10,7)]
+
+print(list(filter(is_triangle,list0)))
+
+"""
+list0 = [(3,4,5),(6,8,10),(3,10,7)]
+
+list1 = list()
+list2 = list()
+list3 = list()
+
+for x,y,z in list0:
+    list1.append(x)
+    list2.append(y)
+    list3.append(z)
+
+print(list1)
+"""
