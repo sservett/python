@@ -31,3 +31,4 @@ def max(x,y):
         return y
 
 print(reduce(max,[2,3,4,133,294,224,3874,2223,387,323]))
+##test
