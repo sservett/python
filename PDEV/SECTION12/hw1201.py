@@ -85,6 +85,3 @@ while True:
         file1.find_word(kelime)
     else:
         print("Invalid option..")
-
-
-
